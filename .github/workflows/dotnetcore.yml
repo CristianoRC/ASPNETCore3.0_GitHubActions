@@ -16,10 +16,10 @@ jobs:
         dotnet-version: 3.0.101
     
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: dotnet build ./APIContagem --configuration Release
 
     - name: Publish
-      run: dotnet publish -c Release -o app
+      run: dotnet publish ./APIContagem -c Release -o app
 
     - uses: azure/login@v1
       with:
