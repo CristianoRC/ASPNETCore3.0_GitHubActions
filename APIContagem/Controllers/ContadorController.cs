@@ -24,6 +24,7 @@ namespace APIContagem.Controllers
                     _CONTADOR.ValorAtual,
                     Environment.MachineName,
                     Sistema = Environment.OSVersion.VersionString,
+                    Local = "Azure Web App + GitHub Actions",
                     Variavel = configuration["TesteAmbiente"],
                     TargetFramework = Assembly
                         .GetEntryAssembly()?
