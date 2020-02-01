@@ -28,5 +28,5 @@ jobs:
     - name: Azure WebApp
       uses: Azure/webapps-deploy@v1
       with:
-        app-name: groffe-anp
+        app-name: groffeanp
         package: './app'
