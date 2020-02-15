@@ -24,7 +24,7 @@ namespace APIContagem.Controllers
                     _CONTADOR.ValorAtual,
                     Environment.MachineName,
                     Sistema = Environment.OSVersion.VersionString,
-                    Local = "FC Nuvem",
+                    Local = "Teste",
                     Variavel = configuration["TesteAmbiente"],
                     TargetFramework = Assembly
                         .GetEntryAssembly()?
