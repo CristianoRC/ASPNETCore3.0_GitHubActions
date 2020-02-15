@@ -22,19 +22,23 @@ namespace APIContagem
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Adicionado o serviço de Health Check
+            services.AddHealthChecks();
+
             services.AddControllers();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // Ativando o middlweare de Health Check
+            app.UseHealthChecks("/status");
 
             app.UseHttpsRedirection();
 
