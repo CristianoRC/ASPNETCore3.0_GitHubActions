@@ -24,7 +24,7 @@ namespace APIContagem.Controllers
                     _CONTADOR.ValorAtual,
                     Environment.MachineName,
                     Sistema = Environment.OSVersion.VersionString,
-                    Local = "Teste",
+                    Local = "Live no Canal .NET",
                     Variavel = configuration["TesteAmbiente"],
                     TargetFramework = Assembly
                         .GetEntryAssembly()?
