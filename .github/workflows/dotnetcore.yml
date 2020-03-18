@@ -29,5 +29,5 @@ jobs:
     - name: Azure WebApp - Publicacao
       uses: Azure/webapps-deploy@v1
       with:
-        app-name: groffe-github
+        app-name: groffe-githubactions
         package: './app'
