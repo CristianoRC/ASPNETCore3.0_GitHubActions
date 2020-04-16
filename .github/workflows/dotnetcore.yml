@@ -20,14 +20,3 @@ jobs:
 
     - name: Publish com o utilitario dotnet
       run: dotnet publish ./APIContagem -c Release -o app
-
-    - name: Conectando no Azure
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
-    - name: Azure WebApp - Publicacao
-      uses: Azure/webapps-deploy@v1
-      with:
-        app-name: groffe-githubactions
-        package: './app'
