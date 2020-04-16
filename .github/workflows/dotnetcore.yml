@@ -25,3 +25,9 @@ jobs:
       uses: montudor/action-zip@v0.1.0
       with:
         args: zip -qq -r ./publicacao.zip ./app
+    
+    - uses: actions/upload-artifact@v1
+      with:
+        name: publicacao.zip
+        path: ./app
+
