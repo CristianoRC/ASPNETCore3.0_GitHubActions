@@ -30,4 +30,11 @@ jobs:
       with:
         name: publicacao.zip
         path: ./app
-
+        
+    - name: Upload release
+      uses: yakuhzi/action-release@v1
+      with:
+        file: ./app
+        changelog: ./README.md
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
