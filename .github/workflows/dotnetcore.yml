@@ -20,3 +20,8 @@ jobs:
 
     - name: Publish
       run: dotnet publish ./APIContagem -c Release  --self-contained -r win-x64 -o app
+    
+    - name: Create Zip File
+      uses: montudor/action-zip@v0.1.0
+      with:
+        args: zip -qq -r ./publicacao.zip ./app
