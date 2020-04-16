@@ -15,8 +15,8 @@ jobs:
       with:
         dotnet-version: 3.0.101
     
-    - name: Build com o utilitario dotnet
+    - name: Build
       run: dotnet build ./APIContagem --configuration Release
 
-    - name: Publish com o utilitario dotnet
-      run: dotnet publish ./APIContagem -c Release -o app
+    - name: Publish
+      run: dotnet publish ./APIContagem -c Release  --self-contained -r win-x64 -o app
