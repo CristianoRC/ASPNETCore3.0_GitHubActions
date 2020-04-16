@@ -31,10 +31,19 @@ jobs:
         name: publicacao.zip
         path: ./app
         
-    - name: Upload release
-      uses: yakuhzi/action-release@v1
-      with:
-        file: ./app
-        changelog: ./README.md
+    - uses: actions/checkout@master
+    - name: Create a Release
+      uses: elgohr/Github-Release-Action@master
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      with:
+        args: Cristiano Cunha
+
+        
+#     - name: Upload release
+#       uses: yakuhzi/action-release@v1
+#       with:
+#         file: ./app
+#         changelog: ./README.md
+#       env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
