@@ -46,4 +46,4 @@ jobs:
 #         file: ./app
 #         changelog: ./README.md
 #       env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+#           GITHUB_TOKEN: 50893d6bd9cef7b218cdff769583f9577fcf4689
