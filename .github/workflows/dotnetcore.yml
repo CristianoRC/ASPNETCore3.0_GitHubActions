@@ -35,15 +35,6 @@ jobs:
     - name: Create a Release
       uses: elgohr/Github-Release-Action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        GITHUB_TOKEN: 816e4aa2875dfa7b0ae4561c0b091ceec533633a
       with:
         args: Cristiano Cunha
-
-        
-#     - name: Upload release
-#       uses: yakuhzi/action-release@v1
-#       with:
-#         file: ./app
-#         changelog: ./README.md
-#       env:
-#           GITHUB_TOKEN: 50893d6bd9cef7b218cdff769583f9577fcf4689
